@@ -222,6 +222,36 @@
 				algo = "sha1";
 			};
 		};
+                fdt@22{
+                        description = "mt8195-cherry-tomato-r1.dtb";
+                        data = /incbin/("arch/arm64/boot/dts/mediatek/mt8195-cherry-tomato-r1.dtb");
+                        type = "flat_dt";
+                        arch = "arm64";
+                        compression = "none";
+                        hash@1{
+                                algo = "sha1";
+                        };
+                };
+                fdt@23{
+                        description = "mt8195-cherry-tomato-r2.dtb";
+                        data = /incbin/("arch/arm64/boot/dts/mediatek/mt8195-cherry-tomato-r2.dtb");
+                        type = "flat_dt";
+                        arch = "arm64";
+                        compression = "none";
+                        hash@1{
+                                algo = "sha1";
+                        };
+                };
+                fdt@24{
+                        description = "mt8195-cherry-tomato-r3.dtb";
+                        data = /incbin/("arch/arm64/boot/dts/mediatek/mt8195-cherry-tomato-r3.dtb");
+                        type = "flat_dt";
+                        arch = "arm64";
+                        compression = "none";
+                        hash@1{
+                                algo = "sha1";
+                        };
+                };
 	};
 	configurations {
 		conf@1{
@@ -308,5 +338,17 @@
 			kernel = "kernel@1";
 			fdt = "fdt@21";
 		};
+                conf@22{
+                        kernel = "kernel@1";
+                        fdt = "fdt@22";
+                };
+                conf@23{
+                        kernel = "kernel@1";
+                        fdt = "fdt@23";
+                };
+                conf@24{
+                        kernel = "kernel@1";
+                        fdt = "fdt@24";
+                };
 	};
 };
